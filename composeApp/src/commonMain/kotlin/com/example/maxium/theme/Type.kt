@@ -29,71 +29,62 @@ val Typography
             fontFamily = Poppins,
             fontWeight = FontWeight.Medium,
             fontSize = 32.sp,
-            lineHeight = TextUnit.Unspecified,
-            letterSpacing = (-2).em
+            lineHeight = TextUnit.Unspecified
         ),
 
         displayMedium = TextStyle(
             fontFamily = Poppins,
             fontWeight = FontWeight.Medium,
             fontSize = 24.sp,
-            lineHeight = TextUnit.Unspecified,
-            letterSpacing = 1.em
+            lineHeight = TextUnit.Unspecified
         ),
 
         displaySmall = TextStyle(
             fontFamily = Inter,
             fontWeight = FontWeight.Medium,
             fontSize = 20.sp,
-            lineHeight = TextUnit.Unspecified,
-            letterSpacing = 0.em
+            lineHeight = TextUnit.Unspecified
         ),
 
         headlineMedium = TextStyle(
             fontFamily = Inter,
             fontWeight = FontWeight.Medium,
             fontSize = 15.sp,
-            lineHeight = TextUnit.Unspecified,
-            letterSpacing = 0.em
+            lineHeight = TextUnit.Unspecified
         ),
 
         headlineSmall = TextStyle(
             fontFamily = Inter,
             fontWeight = FontWeight.Normal,
             fontSize = 15.sp,
-            lineHeight = 20.sp,
-            letterSpacing = 0.em
+            lineHeight = 20.sp
         ),
 
         titleLarge = TextStyle(
             fontFamily = Inter,
             fontWeight = FontWeight.Normal,
             fontSize = 16.sp,
-            lineHeight = TextUnit.Unspecified,
-            letterSpacing = 1.em
+            lineHeight = TextUnit.Unspecified
         ),
 
         titleMedium = TextStyle(
             fontFamily = Inter,
             fontWeight = FontWeight.Normal,
             fontSize = 14.sp,
-            lineHeight = TextUnit.Unspecified,
-            letterSpacing = 0.em
+            lineHeight = TextUnit.Unspecified
         ),
 
         titleSmall = TextStyle(
             fontFamily = Inter,
             fontWeight = FontWeight.Normal,
             fontSize = 12.sp,
-            lineHeight = TextUnit.Unspecified,
-            letterSpacing = 1.em
+            lineHeight = TextUnit.Unspecified
         ),
 
         labelMedium = TextStyle(
             fontFamily = Inter,
             fontWeight = FontWeight.Medium,
             fontSize = 11.sp,
-            lineHeight = TextUnit.Unspecified,
-            letterSpacing = 0.em
+            lineHeight = TextUnit.Unspecified
         )
     )

@@ -1,0 +1,8 @@
+package com.example.maxium.screens
+
+import androidx.compose.runtime.Composable
+
+@Composable
+fun ChatScreen() {
+
+}

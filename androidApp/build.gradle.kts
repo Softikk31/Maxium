@@ -12,6 +12,8 @@ kotlin {
         implementation(projects.composeApp)
         implementation(libs.androidx.activity.compose)
         implementation(libs.compose.uiToolingPreview)
+        implementation(libs.androidx.core.splashscreen)
+        implementation(libs.material)
     }
 
     target {

@@ -20,10 +20,13 @@ val VeryDarkBlue = Color(0xFF5265BB)
 // Neutral / Gray scale
 val White = Color(0xFFFFFFFF)
 val DarkWhite = Color(0xFFECECEC)
+val DarkWhiteVariant = Color(0xFFD9D9D9)
 val LightBlack = Color(0xFF121212)
 val Black = Color(0xFF000000)
 val Grey = Color(0xFF686868)
+val GreyVariant = Color(0xFF8B8B8B)
 val DarkGrey = Color(0xFF2D2D2D)
+val DarkGreyVariant = Color(0xFF575757)
 
 // Accent / Error
 val Red = Color(0xFFD91E21)

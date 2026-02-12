@@ -29,6 +29,7 @@ val LightColorScheme = lightColorScheme(
     onSurface = Black,
     onSurfaceVariant = Grey,
     surfaceContainer = DarkWhite,
+    outline = DarkWhiteVariant,
     error = Red
 )
 
@@ -37,8 +38,9 @@ val DarkColorScheme = darkColorScheme(
     tertiary = Blue,
     surface = LightBlack,
     onSurface = White,
-    onSurfaceVariant = Grey,
+    onSurfaceVariant = GreyVariant,
     surfaceContainer = DarkGrey,
+    outline = DarkGreyVariant,
     error = Red
 )
 
@@ -48,6 +50,7 @@ fun MaxiumTheme(content: @Composable () -> Unit) {
 
     MaterialTheme(
         colorScheme = if (isDarkMode) DarkColorScheme else LightColorScheme,
+        typography = Typography,
         content = content
     )
 }

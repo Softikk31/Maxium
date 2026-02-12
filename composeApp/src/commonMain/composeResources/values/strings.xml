@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Maxium</string>
+
+    <string name="welcome_screen_label">Chat to the Maximum.</string>
+    <string name="welcome_screen_text_button">Start Messaging</string>
+
+    <string name="english_language">English</string>
+</resources>
