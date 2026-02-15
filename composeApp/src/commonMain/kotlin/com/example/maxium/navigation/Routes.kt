@@ -7,6 +7,9 @@ import kotlinx.serialization.Serializable
 data object WelcomeRoute : NavKey
 
 @Serializable
+data object LanguageRoute : NavKey
+
+@Serializable
 data object LoginEmailRoute : NavKey
 
 @Serializable

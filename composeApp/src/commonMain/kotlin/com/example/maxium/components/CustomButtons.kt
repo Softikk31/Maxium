@@ -11,10 +11,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.maxium.components.modifiers.customClickable
+import com.example.maxium.theme.White
 import com.example.maxium.theme.primaryGradient
 
 @Composable
-fun CustomTextButton(
+fun TextButton(
     modifier: Modifier = Modifier,
     text: String,
     onClick: () -> Unit = {}
@@ -32,7 +33,7 @@ fun CustomTextButton(
             modifier = Modifier.padding(16.dp),
             text = text,
             style = MaterialTheme.typography.headlineMedium,
-            color = MaterialTheme.colorScheme.surface
+            color = White
         )
     }
 }

@@ -10,6 +10,7 @@ object Config {
         serializersModule = SerializersModule {
             polymorphic(NavKey::class) {
                 subclass(WelcomeRoute::class, WelcomeRoute.serializer())
+                subclass(LanguageRoute::class, LanguageRoute.serializer())
                 subclass(LoginEmailRoute::class, LoginEmailRoute.serializer())
                 subclass(EmailCodeRoute::class, EmailCodeRoute.serializer())
                 subclass(LoginPasswordRoute::class, LoginPasswordRoute.serializer())

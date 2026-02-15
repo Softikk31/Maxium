@@ -20,14 +20,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.unit.dp
-import com.example.maxium.PlatformDTO
+import androidx.navigation3.runtime.NavBackStack
+import androidx.navigation3.runtime.NavKey
 import com.example.maxium.components.CustomPager
-import com.example.maxium.components.CustomTextButton
+import com.example.maxium.components.TextButton
 import com.example.maxium.components.modifiers.customClickable
-import com.example.maxium.getContext
-import com.example.maxium.getPlatform
-import com.example.maxium.openLanguageSettings
+import com.example.maxium.navigation.LanguageRoute
+import com.example.maxium.theme.Dimens
 import com.example.maxium.theme.primaryGradient
 import maxium.composeapp.generated.resources.Res
 import maxium.composeapp.generated.resources.app_name
@@ -41,12 +40,13 @@ import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
 
 @Composable
-fun WelcomeScreen() {
+fun WelcomeScreen(backStack: NavBackStack<NavKey>) {
     Box(
-        modifier = Modifier.fillMaxSize().systemBarsPadding()
+        modifier = Modifier.fillMaxSize().systemBarsPadding().padding(horizontal = Dimens.paddingMd)
     ) {
         Column(
-            modifier = Modifier.fillMaxWidth().align(Alignment.TopCenter).padding(top = 40.dp),
+            modifier = Modifier.fillMaxWidth().align(Alignment.TopCenter)
+                .padding(top = Dimens.padding2xl),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Box(
@@ -59,7 +59,7 @@ fun WelcomeScreen() {
                     }
                 ) {
                     Icon(
-                        modifier = Modifier.size(21.dp),
+                        modifier = Modifier.size(Dimens.iconSm),
                         imageVector = vectorResource(Res.drawable.ic_moon),
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.tertiary
@@ -67,7 +67,7 @@ fun WelcomeScreen() {
                 }
             }
 
-            Spacer(modifier = Modifier.height(80.dp))
+            Spacer(modifier = Modifier.height(Dimens.padding3xl))
 
             CustomPager(
                 pageCount = 6,
@@ -94,7 +94,7 @@ fun WelcomeScreen() {
                             contentDescription = null
                         )
 
-                        Spacer(modifier = Modifier.height(22.dp))
+                        Spacer(modifier = Modifier.height(Dimens.paddingLg))
 
                         Text(
                             text = stringResource(Res.string.app_name),
@@ -102,7 +102,7 @@ fun WelcomeScreen() {
                             color = MaterialTheme.colorScheme.onSurface
                         )
 
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.height(Dimens.paddingSm))
 
                         Text(
                             text = stringResource(Res.string.welcome_screen_label),
@@ -110,43 +110,38 @@ fun WelcomeScreen() {
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
 
-                        Spacer(modifier = Modifier.height(22.dp))
+                        Spacer(modifier = Modifier.height(Dimens.paddingLg))
                     }
                 }
             )
         }
 
-        val context = getContext()!!
-
         Column(
             modifier = Modifier.fillMaxWidth().align(Alignment.BottomCenter)
-                .padding(bottom = 40.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+                .padding(bottom = Dimens.padding2xl),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(Dimens.paddingLg)
         ) {
-            if (getPlatform().name == PlatformDTO.Android) {
-                Row(
-                    modifier = Modifier.customClickable {
-                        openLanguageSettings(context = context)
-                    },
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Center
-                ) {
-                    Text(
-                        text = stringResource(Res.string.current_language),
-                        style = MaterialTheme.typography.headlineMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                    Icon(
-                        imageVector = vectorResource(Res.drawable.ic_chevron_down),
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(28.dp))
+            Row(
+                modifier = Modifier.customClickable {
+                    backStack.add(LanguageRoute)
+                },
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    text = stringResource(Res.string.current_language),
+                    style = MaterialTheme.typography.headlineMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Icon(
+                    imageVector = vectorResource(Res.drawable.ic_chevron_down),
+                    contentDescription = null,
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
             }
 
-            CustomTextButton(
+            TextButton(
                 modifier = Modifier.fillMaxWidth(),
                 text = stringResource(Res.string.welcome_screen_text_button),
                 onClick = { }

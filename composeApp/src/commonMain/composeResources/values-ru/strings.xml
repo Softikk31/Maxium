@@ -2,5 +2,7 @@
     <string name="welcome_screen_label">Общайся на Максимум.</string>
     <string name="welcome_screen_text_button">Начать общение</string>
 
+    <string name="title_topbar_language">Язык</string>
+
     <string name="current_language">Русский</string>
 </resources>

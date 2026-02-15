@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name" translatable="false">Maxium</string>
 
+    <string name="en_language" translatable="false">English</string>
+    <string name="en_en_language" translatable="false">English</string>
+
+    <string name="ru_language" translatable="false">Русский</string>
+    <string name="en_ru_language" translatable="false">Russian</string>
+
     <string name="welcome_screen_label">Chat to the Maximum.</string>
     <string name="welcome_screen_text_button">Start Messaging</string>
+
+    <string name="title_topbar_language">Language</string>
 
     <string name="current_language">English</string>
 </resources>
