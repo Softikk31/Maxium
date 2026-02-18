@@ -1,13 +1,20 @@
 package com.example.maxium
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.maxium.navigation.NavActivity
-import com.example.maxium.theme.MaxiumTheme
+import com.example.maxium.di.commonModules
+import com.example.maxium.ui.navigation.NavActivity
+import com.example.maxium.ui.theme.MaxiumTheme
+import org.koin.core.context.startKoin
+import org.koin.mp.KoinPlatformTools
 
 @Composable
-@Preview
 fun App() {
+    if (KoinPlatformTools.defaultContext().getOrNull() == null) {
+        startKoin(appDeclaration = {
+            modules(commonModules)
+        })
+    }
+
     MaxiumTheme {
         NavActivity()
     }

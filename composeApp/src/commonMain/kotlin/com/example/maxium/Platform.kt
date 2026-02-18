@@ -5,8 +5,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 enum class PlatformDTO {
-    Android,
-    Desktop
+    Android, Desktop
 }
 
 interface Platform {
@@ -16,8 +15,7 @@ interface Platform {
 expect fun getPlatform(): Platform
 
 enum class Languages {
-    RU,
-    EN
+    RU, EN
 }
 
 val languagesMap = mapOf(Languages.RU to "ru", Languages.EN to "en")

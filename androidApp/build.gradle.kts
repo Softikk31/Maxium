@@ -9,11 +9,16 @@ plugins {
 
 kotlin {
     dependencies {
+        implementation(project(path = ":core"))
+
         implementation(projects.composeApp)
         implementation(libs.androidx.activity.compose)
         implementation(libs.compose.uiToolingPreview)
         implementation(libs.androidx.core.splashscreen)
         implementation(libs.material)
+
+        implementation(libs.koin.android)
+        implementation(libs.koin.compose.vm)
     }
 
     target {
